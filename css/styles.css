@@ -170,8 +170,8 @@ header{
 }
 
 #notifications .profile-image img{
-  width: 48px;
-  min-width: 48px;
+  width: 40px;
+  min-width: 40px;
   aspect-ratio: 1/1;
   border-radius: 100%;
   object-fit: cover;
@@ -232,6 +232,7 @@ button{
 
 button:hover{
   background-color: #136c9c;
+  cursor: pointer;
 }
 
 /* Main */
@@ -346,8 +347,8 @@ main h2{
 }
 
 #trending .profile-image img{
-  width: 48px;
-  min-width: 48px;
+  width: 40px;
+  min-width: 40px;
   aspect-ratio: 1/1;
   border-radius: 100%;  
   object-fit: cover;
