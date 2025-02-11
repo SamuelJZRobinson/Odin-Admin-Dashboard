@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 264px 1fr;
   grid-template-rows: 200px 1fr;
   grid-template-areas:
   "nav header"
@@ -56,13 +56,19 @@ h1, h2, h3, h4, h5, h6 {
 
 nav{
   grid-area: nav;
-  background-color: red;
+  padding: 16px;
+  background-color: #1992D4;
 }
 
-#logo{
+#logo a{
   display: flex;
   align-items: center;
   gap: 16px;
+  color: white;
+  margin-bottom: 32px;
+}
+
+#logo a{
   color: white;
 }
 
@@ -72,6 +78,7 @@ nav{
 
 #logo .title{
   font-size: 1.75rem;
+  font-weight: 600;
 }
 
 ul.nav-list{
@@ -80,12 +87,11 @@ ul.nav-list{
   margin-bottom: 32px;
 }
 
-ul.nav-list li{
+ul.nav-list li a{
   display: flex;
   gap: 16px;
   align-items: center;
   padding: 8px;
-  background-color: gray;
   font-size: 1rem;
   font-weight: 600;
   color: white;
