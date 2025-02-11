@@ -2,7 +2,7 @@
   --primary-bg: #1992D4;
   --primary-text: white;
   --secondary-bg: #F0B429;
-  --indent: #E2E8F0;
+  --indent-bg: #E2E8F0;
   --normal-text: rgba(0,0,0,90%);
   --subtle-text: rgba(0,0,0,70%);
 }
@@ -142,7 +142,7 @@ header{
 #search-bar{
   height: 32px;
   width: 100%;
-  background-color: var(--indent);
+  background-color: var(--indent-bg);
   border-radius: 32px;
 }
 
@@ -226,7 +226,7 @@ main{
   grid-area: main;
   gap: 16px;
   padding: 32px 16px 16px 16px;
-  background-color: green;
+  background-color: var(--indent-bg);
 }
 
 #projects{
