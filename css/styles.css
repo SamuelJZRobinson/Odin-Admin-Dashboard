@@ -161,6 +161,7 @@ header{
   aspect-ratio: 1/1;
   border-radius: 100%;
   object-fit: cover;
+  border: 1px rgba(0,0,0,15%) solid;
 }
 
 #bottom{
@@ -193,6 +194,7 @@ header{
   aspect-ratio: 1/1;
   border-radius: 100%;
   object-fit: cover;
+  border: 1px rgba(0,0,0,15%) solid;
 }
 
 #actions{
@@ -228,12 +230,12 @@ main{
 }
 
 #projects-container{
-  height: 100%;
+  height: fit-content;
   width: 100%;
   display: grid;
   gap: 16px 16px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto;
 }
 
 .card{
@@ -293,4 +295,43 @@ main{
 
 #announcements .row:not(:last-child){
   border-bottom: 1px rgba(0,0,0,30%) solid;
+}
+
+#trending{
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
+}
+
+#trending .user{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+#trending .profile-image img{
+  width: 48px;
+  min-width: 48px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;  
+  object-fit: cover;
+  border: 1px rgba(0,0,0,15%) solid;
+}
+
+#trending .user-name-container{
+  width: 100%;
+}
+
+#trending .username{
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+#trending .motto{
+  font-size: 0.9rem;
+  font-weight: normal;
 }
