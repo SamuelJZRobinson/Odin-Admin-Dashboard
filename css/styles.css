@@ -213,7 +213,29 @@ button{
 
 /* Main */
 main{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-area: main;
-  padding: 8px;
+  padding: 32px 8px 8px 8px;
   background-color: green;
+}
+
+#projects{
+  grid-column: 1/3;
+  background-color: rgb(59, 59, 165);
+}
+
+#projects-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.card{
+  background-color: white;
+}
+
+#sidebar{
+  grid-column: 3/4;
+  background-color: rgb(167, 31, 31);
 }
