@@ -149,7 +149,7 @@ header{
   width: 100%;
   background-color: var(--indent-bg);
   border-radius: 32px;
-  padding: 4px;
+  padding: 8px;
   border: none;
 }
 
