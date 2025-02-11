@@ -7,7 +7,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- Google Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL,GRAD@1,0" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@1" rel="stylesheet">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,32 @@
 </head>
 <body>
   <div id="dashboard">
-    <header></header>
+    <header>
+      <div id="top">
+        <div id="search">
+          <span class="material-symbols-outlined">search</span>
+          <div id="search-bar"></div>
+        </div>
+        <div id="notifications">
+          <span class="material-symbols-outlined">notifications_active</span>
+          <div class="profile-image"><img src="images/profile.jpg" alt="Cat drinking a soda through a straw"></div>
+          <span id="profile-name">Morgan Oakley</span>
+        </div>
+      </div>
+      <div id="bottom">
+        <div id="profile">
+          <div class="profile-image"><img src="images/profile.jpg" alt="Cat drinking a soda through a straw"></div>
+          <p>Hi there,</p>
+          <h2 id="username">Morgan Oakley (@morgan)</h2>
+          <p></p>
+        </div>
+        <div id="actions">
+          <button>New</button>
+          <button>Upload</button>
+          <button>Share</button>
+        </div>
+      </div>
+    </header>
     <nav>
       <div id="logo"><a href="#"><span class="material-symbols-outlined">dashboard</span><span class="title">Dashboard</span></a></div>
 
@@ -34,7 +59,9 @@
         <li><a href="#"><span class="material-symbols-outlined">verified_user</span>Privacy</a></li>
       </ul>
     </nav>
-    <main></main>
+    <main>
+      
+    </main>
   </div>
 </body>
 </html>

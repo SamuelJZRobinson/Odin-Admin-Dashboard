@@ -1,3 +1,8 @@
+:root{
+  --primary-bg: #1992D4;
+  --primary-text: white;
+}
+
 /* Uses joshwcomeau CSS Reset */
 /* Global */
 *, *::before, *::after {
@@ -43,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+/* Dashboard */
 #dashboard{
   height: 100vh;
   width: 100vw;
@@ -54,22 +60,23 @@ h1, h2, h3, h4, h5, h6 {
   "nav main";
 }
 
+/* Navigation */
 nav{
   grid-area: nav;
   padding: 16px;
-  background-color: #1992D4;
+  background-color: var(--primary-bg);
 }
 
 #logo a{
   display: flex;
   align-items: center;
   gap: 16px;
-  color: white;
+  color: var(--primary-text);
   margin-bottom: 32px;
 }
 
 #logo a{
-  color: white;
+  color: var(--primary-text);
 }
 
 #logo .material-symbols-outlined{
@@ -94,19 +101,105 @@ ul.nav-list li a{
   padding: 8px;
   font-size: 1rem;
   font-weight: 600;
-  color: white;
+  color: var(--primary-text);
 }
 
 ul.nav-list li a{
-  color: white;
+  color: var(--primary-text);
 }
 
+/* Header */
 header{
   grid-area: header;
+  padding: 24px 48px;
   background-color: yellow;
 }
 
+#top{
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 32px;
+  background-color: red;
+}
+
+#search{
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  width: 60%;
+  min-width: 200px;
+  max-width: 600%;
+}
+
+#search-bar{
+  height: 24px;
+  width: 100%;
+  background-color: gainsboro;
+  border-radius: 32px;
+}
+
+#notifications{
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#notifications .profile-image img{
+  width: 48px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+#bottom{
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: red;
+}
+
+#profile{
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0px 16px;
+}
+
+#profile .profile-image{
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+#profile .profile-image img{
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+#actions{
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 400;
+}
+
+button{
+  width: 96px;
+  height: fit-content;
+  padding: 8px 16px;
+  color: var(--primary-text);
+  border-radius: 32px;
+  border: none;
+  background-color: var(--primary-bg);
+}
+
+/* Main */
 main{
   grid-area: main;
+  padding: 8px;
   background-color: green;
 }
