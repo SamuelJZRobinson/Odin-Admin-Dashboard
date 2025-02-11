@@ -110,7 +110,7 @@ ul.nav-list li a{
 }
 
 ul.nav-list li a:hover{
-  border-left: 4px var(--secondary-bg) solid;
+  border-left: 3px var(--secondary-bg) solid;
 }
 
 ul.nav-list li a{
@@ -149,6 +149,12 @@ header{
   width: 100%;
   background-color: var(--indent-bg);
   border-radius: 32px;
+  padding: 4px;
+  border: none;
+}
+
+#search-bar:focus{
+  outline: 3px var(--primary-bg) solid;
 }
 
 #notifications{
