@@ -156,6 +156,7 @@ header{
 
 #notifications .profile-image img{
   width: 48px;
+  min-width: 48px;
   aspect-ratio: 1/1;
   border-radius: 100%;
   object-fit: cover;
@@ -187,6 +188,7 @@ header{
 
 #profile .profile-image img{
   width: 80px;
+  min-width: 80px;
   aspect-ratio: 1/1;
   border-radius: 100%;
   object-fit: cover;
