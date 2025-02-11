@@ -1,6 +1,7 @@
 :root{
   --primary-bg: #1992D4;
   --primary-text: white;
+  --secondary-bg: #F0B429;
   --indent: #E2E8F0;
 }
 
@@ -114,9 +115,9 @@ header{
   grid-area: header;
   padding: 24px 48px;
   background-color: var(--primary-text);
-  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.15);
-  -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.15);
-  -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
   z-index: 1;
 }
 
@@ -214,28 +215,58 @@ button{
 /* Main */
 main{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-area: main;
-  padding: 32px 8px 8px 8px;
+  gap: 16px;
+  padding: 32px 16px 16px 16px;
   background-color: green;
 }
 
 #projects{
-  grid-column: 1/3;
+  grid-column: 1/4;
   background-color: rgb(59, 59, 165);
 }
 
 #projects-container{
+  height: 100%;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 16px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: repeat(3, 1fr);
 }
 
 .card{
+  height: 100%;
+  width: 100%;
+  padding: 24px;
   background-color: white;
+  border-left: 8px var(--secondary-bg) solid;
+  border-radius: 8px;
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
+}
+
+.card > .title{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.card > .description{
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-bottom: 32px;
+}
+
+.card > .actions{
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 24px;
 }
 
 #sidebar{
-  grid-column: 3/4;
+  grid-column: 4/5;
   background-color: rgb(167, 31, 31);
 }
