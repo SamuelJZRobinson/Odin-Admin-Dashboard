@@ -109,6 +109,10 @@ ul.nav-list li a{
   color: var(--primary-text);
 }
 
+ul.nav-list li a:hover{
+  border-left: 4px var(--secondary-bg) solid;
+}
+
 ul.nav-list li a{
   color: var(--primary-text);
 }
@@ -218,6 +222,10 @@ button{
   border-radius: 32px;
   border: none;
   background-color: var(--primary-bg);
+}
+
+button:hover{
+  background-color: #136c9c;
 }
 
 /* Main */
