@@ -3,6 +3,8 @@
   --primary-text: white;
   --secondary-bg: #F0B429;
   --indent: #E2E8F0;
+  --normal-text: rgba(0,0,0,90%);
+  --subtle-text: rgba(0,0,0,70%);
 }
 
 /* Uses joshwcomeau CSS Reset */
@@ -153,6 +155,7 @@ header{
 #notifications .username{
   font-weight: bold;
   font-size: 1rem;
+  color: var(--normal-text);
 }
 
 #notifications .profile-image img{
@@ -180,12 +183,14 @@ header{
   font-size: 0.9rem;
   font-weight: 500;
   align-self: flex-end;
+  color: var(--normal-text);
 }
 
 #profile .username{
   font-weight: bold;
   font-size: 1.25rem;
   align-self: flex-start;
+  color: var(--normal-text);
 }
 
 #profile .profile-image img{
@@ -250,15 +255,17 @@ main{
   -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
 }
 
-.title{
+.card .title{
   font-size: 1.1rem;
   font-weight: bold;
+  color: var(--normal-text);
 }
 
 .description{
   font-size: 0.9rem;
   font-weight: normal;
   margin-bottom: 16px;
+  color: var(--subtle-text);
 }
 
 .card > .actions{
@@ -287,6 +294,12 @@ main{
 #announcements .row{
   width: 100%;
   padding: 8px 0px;
+}
+
+#announcements .title{
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--normal-text);
 }
 
 #announcements .row .description{
@@ -329,9 +342,11 @@ main{
 #trending .username{
   font-size: 0.9rem;
   font-weight: normal;
+  color: var(--normal-text);
 }
 
 #trending .motto{
   font-size: 0.9rem;
   font-weight: normal;
+  color: var(--subtle-text);
 }
