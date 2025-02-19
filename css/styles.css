@@ -72,6 +72,10 @@ nav {
   background-color: var(--primary-bg);
 }
 
+#logo {
+  padding: 8px;
+}
+
 #logo a {
   display: flex;
   align-items: center;
@@ -79,8 +83,9 @@ nav {
   color: var(--primary-text);
 }
 
-#logo .material-symbols-outlined {
-  font-size: 3rem;
+#logo img {
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 #logo .title {
