@@ -22,7 +22,7 @@
 body {
   display: grid;
   grid-template-columns: 264px 1fr;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 200px 1fr 100px;
   grid-template-areas:
   "nav header"
   "nav main"
@@ -373,14 +373,15 @@ main h2 {
 /* Footer */
 footer {
   grid-area: footer;
-  width: 100%;
-  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--footer-bg);
-  padding: 1rem 0rem;
 }
 
 #copyright {
   text-align: center;
   color: white;
   font-size: 0.9rem;
+  font-weight: normal;
 }
