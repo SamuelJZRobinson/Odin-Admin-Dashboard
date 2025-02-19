@@ -1,4 +1,7 @@
-:root{
+
+/* Uses joshwcomeau CSS Reset */
+/* Global */
+:root {
   --primary-bg: #1992D4;
   --primary-text: white;
   --secondary-bg: #F0B429;
@@ -8,8 +11,6 @@
   --footer-bg: hsl(201, 79%, 35%);
 }
 
-/* Uses joshwcomeau CSS Reset */
-/* Global */
 *, *::before, *::after {
   box-sizing: border-box;
 }
