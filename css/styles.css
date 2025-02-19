@@ -5,6 +5,7 @@
   --indent-bg: #E2E8F0;
   --normal-text: rgba(0,0,0,90%);
   --subtle-text: rgba(0,0,0,70%);
+  --footer-bg: hsl(201, 79%, 35%);
 }
 
 /* Uses joshwcomeau CSS Reset */
@@ -54,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Dashboard */
-#dashboard{
+#dashboard {
   height: 100vh;
   width: 100vw;
   display: grid;
@@ -62,114 +63,113 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-rows: 200px 1fr;
   grid-template-areas:
   "nav header"
-  "nav main";
+  "nav main"
+  "footer footer";
 }
 
 /* Navigation */
-nav{
+nav {
   grid-area: nav;
-  padding: 16px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
   background-color: var(--primary-bg);
 }
 
-#logo a{
+#logo a {
   display: flex;
   align-items: center;
-  gap: 16px;
-  color: var(--primary-text);
-  margin-bottom: 32px;
-}
-
-#logo a{
+  gap: 1rem;
   color: var(--primary-text);
 }
 
-#logo .material-symbols-outlined{
-  font-size: 48px;
+#logo .material-symbols-outlined {
+  font-size: 3rem;
 }
 
-#logo .title{
+#logo .title {
   font-size: 1.75rem;
   font-weight: 600;
 }
 
-ul.nav-list{
+nav ul {
   list-style-type: none;
   padding: 0;
-  margin-bottom: 32px;
 }
 
-ul.nav-list li a{
+nav ul li a {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   align-items: center;
   padding: 8px;
   font-size: 1rem;
   font-weight: 600;
   color: var(--primary-text);
+  border-left: 3px rgba(0,0,0,0%) solid;
 }
 
-ul.nav-list li a:hover{
+nav ul li a:hover {
   border-left: 3px var(--secondary-bg) solid;
 }
 
-ul.nav-list li a{
-  color: var(--primary-text);
-}
-
 /* Header */
-header{
+header {
   grid-area: header;
-  padding: 24px 48px;
+  padding: 1.5rem 3rem;
   background-color: var(--primary-text);
   box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
   -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
   -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
-  z-index: 1;
 }
 
-#top{
+header .row{
   display: inline-flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 32px;
+  height: auto;
 }
 
-#search{
+header .row:not(:last-child){
+  margin-bottom: 2rem;
+}
+
+/* Row 1 */
+#search {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
   width: 60%;
   min-width: 200px;
   max-width: 600%;
 }
 
-#search-bar{
-  height: 32px;
+#search-bar {
+  height: 2rem;
   width: 100%;
   background-color: var(--indent-bg);
-  border-radius: 32px;
+  border-radius: 2rem;
   padding: 8px;
   border: none;
 }
 
-#search-bar:focus{
+#search-bar:focus {
   outline: 3px var(--primary-bg) solid;
 }
 
-#notifications{
+#notifications {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
-#notifications .username{
+#notifications .username {
   font-weight: bold;
   font-size: 1rem;
   color: var(--normal-text);
 }
 
-#notifications .profile-image img{
+#notifications img.profile-image {
   width: 40px;
   min-width: 40px;
   aspect-ratio: 1/1;
@@ -178,33 +178,28 @@ header{
   border: 1px rgba(0,0,0,15%) solid;
 }
 
-#bottom{
-  display: inline-flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-#profile{
+/* Row 2 */
+#profile {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   align-items: center;
 }
 
-#profile .greeting{
+#profile .greeting {
   font-size: 0.9rem;
   font-weight: 500;
   align-self: flex-end;
   color: var(--normal-text);
 }
 
-#profile .username{
+#profile .username {
   font-weight: bold;
   font-size: 1.25rem;
   align-self: flex-start;
   color: var(--normal-text);
 }
 
-#profile .profile-image img{
+#profile img.profile-image {
   width: 80px;
   min-width: 80px;
   aspect-ratio: 1/1;
@@ -213,60 +208,62 @@ header{
   border: 1px rgba(0,0,0,15%) solid;
 }
 
-#actions{
+#actions {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
   font-weight: 400;
 }
 
-button{
+button {
   width: 96px;
   height: fit-content;
-  padding: 8px 16px;
+  padding: 8px 1rem;
   color: var(--primary-text);
-  border-radius: 32px;
-  border: none;
   background-color: var(--primary-bg);
+  border: none;
+  border-radius: 2rem;
 }
 
-button:hover{
+button:hover {
   background-color: #136c9c;
   cursor: pointer;
 }
 
 /* Main */
-main{
+main {
+  grid-area: main;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-area: main;
-  gap: 16px;
-  padding: 32px 48px 32px 32px;
+  gap: 1rem;
+  padding: 2rem 3rem 2rem 2rem;
   background-color: var(--indent-bg);
 }
 
-main h2{
-  margin-bottom: 8px;
+main h2 {
   color: var(--normal-text);
+  margin-bottom: 8px;
 }
 
-#projects{
+/* Projects */
+#projects {
   grid-column: 1/4;
 }
 
-#projects-container{
-  height: fit-content;
+#projects-container {
   width: 100%;
+  height: auto;
   display: grid;
-  gap: 16px;
+  gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: auto;
+  margin-bottom: 2rem;
 }
 
-.card{
+.project-card {
   height: 100%;
   width: 100%;
-  padding: 24px;
+  padding: 1.5rem;
   background-color: white;
   border-left: 8px var(--secondary-bg) solid;
   border-radius: 8px;
@@ -275,35 +272,36 @@ main h2{
   -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
 }
 
-.card .title{
+.project-card .title {
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--normal-text);
 }
 
-.description{
+.project-card .description {
   font-size: 0.9rem;
   font-weight: normal;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   color: var(--subtle-text);
 }
 
-.card > .actions{
+.project-card .actions {
   width: 100%;
   display: inline-flex;
   justify-content: flex-end;
-  gap: 16px;
+  gap: 1rem;
 }
 
-#sidebar{
+/* Announcements */
+#sidebar {
   grid-column: 4/5;
 }
 
-#announcements{
+#announcements {
   width: 100%;
-  height: fit-content;
-  padding: 24px;
-  margin-bottom: 32px;
+  height: auto;
+  padding: 0rem 1.5rem;
+  margin-bottom: 2rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
@@ -311,27 +309,31 @@ main h2{
   -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
 }
 
-#announcements .row{
+.announcement-item {
   width: 100%;
-  padding: 8px 0px;
+  padding: 1.5rem 0rem;
 }
 
-#announcements .title{
+.announcement-item:not(:last-child){
+  border-bottom: 1px rgba(0,0,0,30%) solid;
+}
+
+.announcement-item .title {
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--normal-text);
 }
 
-#announcements .row .description{
+.announcement-item .description {
   font-size: 0.8rem;
+  font-weight: normal;
+  color: var(--subtle-text);
 }
 
-#announcements .row:not(:last-child){
-  border-bottom: 1px rgba(0,0,0,30%) solid;
-}
-
-#trending{
-  padding: 16px;
+/* Trending */
+#trending {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
@@ -339,14 +341,17 @@ main h2{
   -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,15%);
 }
 
-#trending .user{
+.trending-item {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   align-items: center;
-  margin-bottom: 24px;
 }
 
-#trending .profile-image img{
+.trending-item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.trending-item img.profile-image {
   width: 40px;
   min-width: 40px;
   aspect-ratio: 1/1;
@@ -355,18 +360,33 @@ main h2{
   border: 1px rgba(0,0,0,15%) solid;
 }
 
-#trending .user-name-container{
+.trending-item .user-info {
   width: 100%;
 }
 
-#trending .username{
+.trending-item .username {
   font-size: 0.9rem;
   font-weight: normal;
   color: var(--normal-text);
 }
 
-#trending .motto{
+.trending-item .motto {
   font-size: 0.9rem;
   font-weight: normal;
   color: var(--subtle-text);
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  width: 100%;
+  height: auto;
+  background-color: var(--footer-bg);
+  padding: 1rem 0rem;
+}
+
+#copyright {
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
 }

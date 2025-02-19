@@ -20,36 +20,35 @@
 <body>
   <div id="dashboard">
     <header>
-      <div id="top">
+      <div class="row">
         <div id="search">
           <span class="material-symbols-outlined">search</span>
-          <input type="text" id="search-bar" maxlength="256"></input>
+          <input type="search" id="search-bar" maxlength="256"></input>
         </div>
         <div id="notifications">
           <span class="material-symbols-outlined">notifications_active</span>
-          <div class="profile-image"><img src="images/profile.png" alt="Generic woman avatar"></div>
+          <img src="images/profile.png" alt="Generic woman avatar" class="profile-image">
           <p class="username">Morgan Oakley</p>
         </div>
       </div>
-      <div id="bottom">
+      <div class="row">
         <div id="profile">
-          <div class="profile-image"><img src="images/profile.png" alt="Generic woman avatar"></div>
+          <img src="images/profile.png" alt="Generic woman avatar" class="profile-image">
           <div class="profile-name-container">
             <p class="greeting">Hi there,</p>
             <p class="username">Morgan Oakley (@morgan)</p>
           </div>
         </div>
         <div id="actions">
-          <button>New</button>
-          <button>Upload</button>
-          <button>Share</button>
+          <button type="button">New</button>
+          <button type="button">Upload</button>
+          <button type="button">Share</button>
         </div>
       </div>
     </header>
     <nav>
       <div id="logo"><a href="#"><span class="material-symbols-outlined">dashboard</span><span class="title">Dashboard</span></a></div>
-
-      <ul class="nav-list">
+      <ul>
         <li><a href="#"><span class="material-symbols-outlined">home</span>Home</a></li>
         <li><a href="#"><span class="material-symbols-outlined">id_card</span>Profile</a></li>
         <li><a href="#"><span class="material-symbols-outlined">mode_comment</span>Messages</a></li>
@@ -57,19 +56,18 @@
         <li><a href="#"><span class="material-symbols-outlined">content_copy</span>Tasks</a></li>
         <li><a href="#"><span class="material-symbols-outlined">groups</span>Communities</a></li>
       </ul>
-
-      <ul class="nav-list">
+      <ul>
         <li><a href="#"><span class="material-symbols-outlined">settings</span>Settings</a></li>
         <li><a href="#"><span class="material-symbols-outlined">help</span>Support</a></li>
         <li><a href="#"><span class="material-symbols-outlined">verified_user</span>Privacy</a></li>
       </ul>
     </nav>
+
     <main>
       <div id="projects">
         <h2>Your projects</h2>
         <div id="projects-container">
-          <!-- Card Item -->
-          <div class="card">
+          <div class="project-card">
             <p class="title">Title</p>
             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus a, consectetur consequuntur quia sit nihil doloribus officia qui asperiores enim?</p>
             <div class="actions">
@@ -78,8 +76,7 @@
               <span class="material-symbols-outlined">share</span>
             </div>
           </div>
-          <!-- Card Item -->
-          <div class="card">
+          <div class="project-card">
             <p class="title">Title</p>
             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus a, consectetur consequuntur quia sit nihil doloribus officia qui asperiores enim?</p>
             <div class="actions">
@@ -88,8 +85,7 @@
               <span class="material-symbols-outlined">share</span>
             </div>
           </div>
-          <!-- Card Item -->
-          <div class="card">
+          <div class="project-card">
             <p class="title">Title</p>
             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus a, consectetur consequuntur quia sit nihil doloribus officia qui asperiores enim?</p>
             <div class="actions">
@@ -98,8 +94,7 @@
               <span class="material-symbols-outlined">share</span>
             </div>
           </div>
-          <!-- Card Item -->
-          <div class="card">
+          <div class="project-card">
             <p class="title">Title</p>
             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus a, consectetur consequuntur quia sit nihil doloribus officia qui asperiores enim?</p>
             <div class="actions">
@@ -108,8 +103,7 @@
               <span class="material-symbols-outlined">share</span>
             </div>
           </div>
-          <!-- Card Item -->
-          <div class="card">
+          <div class="project-card">
             <p class="title">Title</p>
             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus a, consectetur consequuntur quia sit nihil doloribus officia qui asperiores enim?</p>
             <div class="actions">
@@ -118,8 +112,7 @@
               <span class="material-symbols-outlined">share</span>
             </div>
           </div>
-          <!-- Card Item -->
-          <div class="card">
+          <div class="project-card">
             <p class="title">Title</p>
             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus a, consectetur consequuntur quia sit nihil doloribus officia qui asperiores enim?</p>
             <div class="actions">
@@ -133,52 +126,45 @@
       <div id="sidebar">
         <h2>Announcements</h2>
         <div id="announcements">
-          <!-- Announcement Item -->
-          <div class="row">
+          <div class="announcement-item">
             <p class="title">Title</p>
             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus a, consectetur consequuntur quia sit nihil doloribus officia qui asperiores enim?</p>
           </div>
-          <!-- Announcement Item -->
-          <div class="row">
+          <div class="announcement-item">
             <p class="title">Title</p>
             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus a, consectetur consequuntur quia sit nihil doloribus officia qui asperiores enim?</p>
           </div>
-          <!-- Announcement Item -->
-          <div class="row">
+          <div class="announcement-item">
             <p class="title">Title</p>
             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus a, consectetur consequuntur quia sit nihil doloribus officia qui asperiores enim?</p>
           </div>
         </div>
         <h2>Trending</h2>
         <div id="trending">
-          <!-- User Item -->
-          <div class="user">
-            <div class="profile-image"><img src="images/profile.png" alt="Generic woman avatar"></div>
-            <div class="user-name-container">
+          <div class="trending-item">
+            <img src="images/profile.png" alt="Generic woman avatar" class="profile-image">
+            <div class="user-info">
               <p class="username">@tegan</p>
               <p class="motto">World Peace Builder</p>
             </div>
           </div>
-          <!-- User Item -->
-          <div class="user">
-            <div class="profile-image"><img src="images/profile.png" alt="Generic woman avatar"></div>
-            <div class="user-name-container">
+          <div class="trending-item">
+            <img src="images/profile.png" alt="Generic woman avatar" class="profile-image">
+            <div class="user-info">
               <p class="username">@morgan</p>
               <p class="motto">Super Cool Project</p>
             </div>
           </div>
-          <!-- User Item -->
-          <div class="user">
-            <div class="profile-image"><img src="images/profile.png" alt="Generic woman avatar"></div>
-            <div class="user-name-container">
+          <div class="trending-item">
+            <img src="images/profile.png" alt="Generic woman avatar" class="profile-image">
+            <div class="user-info">
               <p class="username">@kendali</p>
               <p class="motto">Life Changing App</p>
             </div>
           </div>
-          <!-- User Item -->
-          <div class="user">
-            <div class="profile-image"><img src="images/profile.png" alt="Generic woman avatar"></div>
-            <div class="user-name-container">
+          <div class="trending-item">
+            <img src="images/profile.png" alt="Generic woman avatar" class="profile-image">
+            <div class="user-info">
               <p class="username">@alex</p>
               <p class="motto">No Traffic Maker</p>
             </div>
@@ -186,6 +172,10 @@
         </div>
       </div>
     </main>
+
+    <footer>
+      <p id="copyright">&copy;2025 Samuel Robinson</p>
+    </footer>
   </div>
 </body>
 </html>
